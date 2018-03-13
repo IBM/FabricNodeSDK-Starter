@@ -62,4 +62,5 @@ if [ $BUILD ];
     docker build -t shop-ca:latest shopCertificateAuthority/
     docker build -t fitcoin-ca:latest fitcoinCertificateAuthority/
     docker build -t blockchain-setup:latest blockchainNetwork/
+    docker build -t blockchain-setup-couchdb:latest blockchainNetworkWithCouchDB/
 fi

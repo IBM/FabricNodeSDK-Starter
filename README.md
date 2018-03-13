@@ -17,12 +17,13 @@ Welcome to Part 1 of building a Blockchain Application using an alternative appr
 
 ## Prerequisites
 * [Docker](https://www.docker.com/products/overview) - v1.13 or higher
-* [Docker Compose](https://docs.docker.com/compose/overview/) - v1.8 or higher 
+* [Docker Compose](https://docs.docker.com/compose/overview/) - v1.8 or higher
 
 ## Steps
 1. [Run Build.sh Script to build network](#1-run-the-build.sh-script)
-2. [Check the logs to see the results](#2-check-the-logs)
-3. [Check the Blockchain Network](#3-check-the-blockchainnetwork)
+2. [Start the Network](#2-start-the-network)
+3. [Check the logs to see the results](#3-check-the-logs)
+4. [Check the Blockchain Network](#4-check-the-blockchainnetwork)
 
 ## 1. Run the Build.sh Script
 This accomplishes the following:
@@ -37,10 +38,7 @@ c.  Create Peers, Orderers and Channel
 
   * The `configtx.yaml` file initializes a blockchain network or channel and services with an Orderer Genesis Block which serves as the first block on a chain. Additionally, membership services are installed on each channel peer (in this case, the Shop and Fitcoin Peers).
 
-d. Install Chaincode on the peer nodes and start the Blockchain network.
-
-g. Build docker images of the orderer, peers, channel, network, rabbitCluster, redicCluster
-
+d. Build docker images of the orderer, peers, channel, network
 
 ### Open a new terminal and run the following command:
 ```bash
@@ -55,7 +53,19 @@ chmod +x clean.sh
 ./build.sh
 ```
 
-## 2. Check the logs
+## 2. Start the Network
+
+There 2 options to install chaincode on the peer nodes and start the Blockchain network. You can select any one of the following:
+* Using LevelDB to store the blockchain state database. Run the following command to start the network:
+```bash
+docker-compose -p "fitcoin" -f "docker-compose.yaml" up -d    
+```
+* Using CouchDB to store the blockchain state database. Run the following command to start the network:
+```bash
+docker-compose -p "fitcoin" -f "docker-compose-couchdb.yaml" up -d    
+```
+
+## 3. Check the logs
 
 You will see the results of running the script
 
@@ -83,7 +93,7 @@ Successfully instantiated chaincode on all peers.
 ```
 
 
-## 3.  Check the BlockchainNetwork
+## 4.  Check the BlockchainNetwork
 
 Execute the following commands to to test the network by performing the `invoke` and `query` operations on the network:
 ```bash
@@ -93,7 +103,16 @@ node config.js
 cd ..
 cd test/
 npm install
+```
+
+If you are using LevelDB, then run the following command:
+```bash
 node index.js
+```
+
+If you are using CouchDB, then run the following command:
+```bash
+node indexCouchDB.js
 ```
 
 ## Ready to move to Step 2!
