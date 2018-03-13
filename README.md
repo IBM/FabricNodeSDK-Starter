@@ -12,7 +12,7 @@ Welcome to Part 1 of building a Blockchain Application using an alternative appr
 ## Application Workflow Diagram
 ![Application Workflow](images/Pattern1-Build-a-network.png)
 
-1. Issue a `Git Clone https://github.com/IBM/BuildingABlockchainApplicationOutsideofComposer.git`. Issue the command `build.sh`.
+1. Issue a `git clone https://github.com/IBM/BuildingABlockchainApplicationOutsideofComposer.git`. Issue the command `build.sh`.
 2. The Blockchain get created.
 
 ## Prerequisites
