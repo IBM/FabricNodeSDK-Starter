@@ -95,3 +95,13 @@ cd test/
 npm install
 node index.js
 ```
+
+## Ready to move to Step 2!
+Congratulations - you have completed Step 1 in this Journey - move onto Step 2
+
+## Additional Resources
+* [Hyperledger Fabric Docs](http://hyperledger-fabric.readthedocs.io/en/latest/)
+* [Hyperledger Composer Docs](https://hyperledger.github.io/composer/introduction/introduction.html)
+
+## License
+[Apache 2.0](LICENSE)
