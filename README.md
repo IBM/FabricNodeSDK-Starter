@@ -1,12 +1,13 @@
-# BuildingABlockchainApplicationOutsideofComposer
+# Creating and Deploying a Blockchain Network using Hyperledger Fabric Node SDK
 
 ## Instructions for setting the blockchainNetwork
 
-Welcome to Part 1 of building a Blockchain Application using an alternative approach to using the Hyperledger Composer tooling. The first step is focused on creating and deploying a Hyperledger Blockchain Network.
+Welcome to Part 1 of building a Blockchain Application.  The first step is focused on creating and deploy a Hyperledger Blockchain Network using the Hyperledger Fabric Node SDK. 
 
 ## Included Components
 * Hyperledger Fabric
 * Docker
+* Hyperledger Fabric SDK for node.js
 
 
 ## Application Workflow Diagram
