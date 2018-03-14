@@ -4,10 +4,10 @@ var resolve = require('path').resolve;
 var EventEmitter = require('events').EventEmitter;
 var hfc = require('fabric-client');
 var CAClient = require('fabric-ca-client');
-var CouchDBKeyValueStore = require('./CouchDBKeyValueStore.js');
+var CouchDBKeyValueStore = require('./set-up/CouchDBKeyValueStore.js');
 var CKS = require('fabric-client/lib/impl/CryptoKeyStore.js');
-import enrollUser from './enroll';
-var utils = require('./utils.js');
+import enrollUser from './set-up/enroll';
+var utils = require('./set-up/utils.js');
 process.env.GOPATH = resolve(__dirname, '../chaincode');
 const JOIN_TIMEOUT = 120000,
   TRANSACTION_TIMEOUT = 120000;
