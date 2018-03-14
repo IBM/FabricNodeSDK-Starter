@@ -56,6 +56,11 @@ chmod +x clean.sh
 
 ## 2. Start the Network
 
+Make sure the 'LOCALCONFIG' environment variable is unset if you are re-running this step after running the test below
+```bash
+unset LOCALCONFIG  
+```
+
 There 2 options to install chaincode on the peer nodes and start the Blockchain network. You can select any one of the following:
 * Using LevelDB to store the blockchain state database. Run the following command to start the network:
 ```bash
@@ -116,8 +121,6 @@ If you are using CouchDB, then run the following command:
 node indexCouchDB.js
 ```
 
-## Ready to move to Step 2!
-Congratulations - you have completed Step 1 in this Journey - move onto Step 2
 
 ## Additional Resources
 * [Hyperledger Fabric Docs](http://hyperledger-fabric.readthedocs.io/en/latest/)
