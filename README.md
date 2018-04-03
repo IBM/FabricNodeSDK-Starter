@@ -13,9 +13,6 @@ Welcome to Part 1 of building a Blockchain Application.  The first step is focus
 ## Application Workflow Diagram
 ![Application Workflow](images/Pattern1-Build-a-network.png)
 
-1. Issue a `git clone https://github.com/IBM/BuildingABlockchainApplicationOutsideofComposer.git`. Issue the command `build.sh`.
-2. The Blockchain get created.
-
 ## Prerequisites
 * [Docker](https://www.docker.com/products/overview) - v1.13 or higher
 * [Docker Compose](https://docs.docker.com/compose/overview/) - v1.8 or higher
