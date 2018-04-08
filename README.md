@@ -30,7 +30,7 @@ a. Clean up system by removing any existing blockchain docker images
 
 b. Generate certificates
 
-  * The `crypto-config.yaml` (Crypto configuration file) defines the identity of "who is who". It tells peers and orderers what organization they belown to and what doman they belong to.
+  * The `crypto-config.yaml` (Crypto configuration file) defines the identity of "who is who". It tells peers and orderers what organization they belong to and what domain they belong to.
 
 c.  Create Peers, Orderers and Channel
 
