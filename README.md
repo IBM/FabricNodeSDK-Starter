@@ -120,8 +120,8 @@ node indexCouchDB.js
 
 
 ## Additional Resources
-* [Hyperledger Fabric Docs](http://hyperledger-fabric.readthedocs.io/en/latest/)
-* [Hyperledger Composer Docs](https://hyperledger.github.io/composer/introduction/introduction.html)
+* [Hyperledger Fabric Documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.1/)
+* [Hyperledger Fabric code on GitHub](https://github.com/hyperledger/fabric)
 
 ## License
 [Apache 2.0](LICENSE)
