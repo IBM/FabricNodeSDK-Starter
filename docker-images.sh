@@ -3,7 +3,8 @@ set -eu
 
 dockerFabricPull() {
   local FABRIC_TAG=$1
-  for IMAGES in peer orderer ccenv couchdb; do
+  #for IMAGES in peer orderer ccenv couchdb; do
+    for IMAGES in peer orderer ccenv; do
       echo "==> FABRIC IMAGE: $IMAGES"
       echo
       docker pull hyperledger/fabric-$IMAGES:$FABRIC_TAG
@@ -17,6 +18,13 @@ dockerCaPull() {
       echo
       docker pull hyperledger/fabric-ca:$CA_TAG
       docker tag hyperledger/fabric-ca:$CA_TAG hyperledger/fabric-ca
+}
+
+dockerCouchDBPull() {
+      echo "==> Couchdb IMAGE"
+      echo
+      docker pull ishangulhane/fabric-couchdb
+      docker tag ishangulhane/fabric-couchdb ishangulhane/fabric-couchdb
 }
 
 BUILD=
@@ -36,16 +44,21 @@ else
             fi
     done
 fi
-# 1.0.6
+# 1.1.0
 if [ $DOWNLOAD ]; then
-    : ${CA_TAG:="x86_64-1.0.6"}
-    : ${FABRIC_TAG:="x86_64-1.0.6"}
+    : ${CA_TAG:="x86_64-1.1.0"}
+    : ${FABRIC_TAG:="x86_64-1.1.0"}
+
 
     echo "===> Pulling fabric Images"
     dockerFabricPull ${FABRIC_TAG}
 
     echo "===> Pulling fabric ca Image"
     dockerCaPull ${CA_TAG}
+
+    echo "===> Pulling fabric couchdb Image"
+    dockerCouchDBPull
+
     echo
     echo "===> List out hyperledger docker images"
     docker images | grep hyperledger*

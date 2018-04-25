@@ -66,7 +66,7 @@ function getAdminOrgs() {
     try {
       await getAdminOrgs();
       const socketPath = process.env.DOCKER_SOCKET_PATH || (process.platform === 'win32' ? '//./pipe/docker_engine' : '/var/run/docker.sock');
-      const ccenvImage = process.env.DOCKER_CCENV_IMAGE || 'hyperledger/fabric-ccenv:x86_64-1.0.2';
+      const ccenvImage = process.env.DOCKER_CCENV_IMAGE || 'hyperledger/fabric-ccenv:x86_64-1.1.0';
       const listOpts = {
         socketPath,
         method: 'GET',
@@ -142,14 +142,7 @@ function getAdminOrgs() {
     console.log(e);
     process.exit(-1);
   }
-  try {
-    await clients[1].registerAndEnroll("sampleUser");
-    console.log('Blockchain newtork setup complete.');
-  } catch(e) {
-    console.log('Fatal error instantiating chaincode on some(all) peers!');
-    console.log(e);
-    process.exit(-1);
-  }
+  
 })();
 // Export organization clients
 /*export {

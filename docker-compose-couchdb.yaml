@@ -3,7 +3,7 @@ version: "3.1"
 services:
   ca-datastore:
     container_name: ca-datastore
-    image: hyperledger/fabric-couchdb:x86_64-1.0.6
+    image: ishangulhane/fabric-couchdb
     environment:
       - COUCHDB_USER=
       - COUCHDB_PASSWORD=
@@ -17,7 +17,7 @@ services:
 
   fitcoin-statedb:
     container_name: fitcoin-statedb
-    image: hyperledger/fabric-couchdb:x86_64-1.0.6
+    image: ishangulhane/fabric-couchdb
     environment:
       - COUCHDB_USER=
       - COUCHDB_PASSWORD=
@@ -31,7 +31,7 @@ services:
 
   shop-statedb:
     container_name: shop-statedb
-    image: hyperledger/fabric-couchdb:x86_64-1.0.6
+    image: ishangulhane/fabric-couchdb
     environment:
       - COUCHDB_USER=
       - COUCHDB_PASSWORD=
@@ -185,7 +185,7 @@ services:
     image: blockchain-setup-couchdb
     environment:
     - DOCKER_SOCKET_PATH=/host/var/run/docker.sock
-    - DOCKER_CCENV_IMAGE=hyperledger/fabric-ccenv:x86_64-1.0.6
+    - DOCKER_CCENV_IMAGE=hyperledger/fabric-ccenv:x86_64-1.1.0
     - SECRETSDIR=/run/secrets
     volumes:
     - /var/run/:/host/var/run/
@@ -195,9 +195,7 @@ services:
     - shop-peer
     - fitcoin-ca
     - fitcoin-peer
-    - ca-datastore
-    - shop-statedb
-    - fitcoin-statedb
+
     secrets:
       - config
       - channel

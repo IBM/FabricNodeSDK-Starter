@@ -131,7 +131,7 @@ services:
     image: blockchain-setup
     environment:
     - DOCKER_SOCKET_PATH=/host/var/run/docker.sock
-    - DOCKER_CCENV_IMAGE=hyperledger/fabric-ccenv:x86_64-1.0.6
+    - DOCKER_CCENV_IMAGE=hyperledger/fabric-ccenv:x86_64-1.1.0
     - SECRETSDIR=/run/secrets
     volumes:
     - /var/run/:/host/var/run/
