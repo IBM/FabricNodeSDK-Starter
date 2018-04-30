@@ -75,8 +75,6 @@ export default async function (userId, clientObject, chaincodeId, chaincodeVersi
           //return return_status;
         }, (err) => {
           //clearTimeout(handle);
-          //throw new Error('There was a problem with the eventhub ::' + err);
-          //reject(new Error('There was a problem with the eventhub ::' + err));
           count++;
           if(count > 2) {
             clearTimeout(handle);

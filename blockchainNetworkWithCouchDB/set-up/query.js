@@ -33,10 +33,6 @@ export default async function (userId, clientObject, chaincodeId, chaincodeVersi
       if(query_responses[0] instanceof Error) {
         throw new Error("Error from query = ", query_responses[0].message);
       } else {
-        //console.log("Query Response : " + query_responses);
-        /*return JSON.stringify({
-          response: query_responses.toString('utf8')
-        });*/
         return query_responses.toString('utf8');
       }
     } else {

@@ -314,8 +314,8 @@ export class OrganizationClient extends EventEmitter {
       if(!enrollmentID && enrollmentID === "") {
         throw new Error(`Invalid User Id`);
       }
-      //let adminUser = await this._client.getUserContext('admin', true);
-      let adminUser = this._adminUser;
+      let adminUser = await this._client.getUserContext('admin', true);
+      //let adminUser = this._adminUser;
       if(!adminUser && !adminUser.isEnrolled()) {
         throw new Error(`Admin user not present to register user : ` + enrollmentID);
       }
