@@ -61,11 +61,11 @@ unset LOCALCONFIG
 ```
 
 피어노드에 체인코드를 설치하고 블록체인 네트워크를 시작하기 위한 두 가지 옵션이 있습니다. 다음 중 하나를 선택하세요.
-* Using LevelDB to store the blockchain state database. Run the following command to start the network:
+* LevelDB 사용하여 블록체인 상태를 저장하는 경우, 다음 명령어를 실행하여 네트워크를 시작합니다:
 ```bash
 docker-compose -p "fitcoin" -f "docker-compose.yaml" up -d    
 ```
-* Using CouchDB to store the blockchain state database. Run the following command to start the network:
+* CouchDB 사용하여 블록체인 상태를 저장하는 경우, 다음 명령어를 실행하여 네트워크를 시작합니다:
 ```bash
 docker-compose -p "fitcoin" -f "docker-compose-couchdb.yaml" up -d    
 ```
