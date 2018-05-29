@@ -26,7 +26,7 @@ lite 계정을 가진 개발자는 이 애플리케이션을 로컬에서 실행
 4. [블록체인 네트워크 확인](#4-블록체인-네트워크-확인)
 
 ## 1. Build.sh 스크립트 실행
-아래 순서를 수행합니다:
+다음 순서를 수행합니다:
 
 a. 기존에 존재하는 블록체인 도커 이미지를 삭제하여 시스템을 초기화한다.
 
@@ -40,7 +40,7 @@ c. Peers, Orderers 그리고 Channel을 생성한다.
 
 d. Orderer, Peer, Channel, Network 도커 이미지를 생성한다.
 
-### 새로운 터미널을 열어 아래 명령어 실행:
+### 새로운 터미널을 열어 다음 명령어 실행:
 ```bash
 export FABRIC_CFG_PATH=$(pwd)
 chmod +x cryptogen
@@ -55,7 +55,7 @@ chmod +x clean.sh
 
 ## 2. 네트워크 시작
 
-아래 테스트 실행 후 이 순서를 재 진행하는 경우 'LOCALCONFIG' 환경변수가 정의되지 않도록 합니다.
+다음 테스트 실행 후 이 순서를 재 진행하는 경우 'LOCALCONFIG' 환경변수가 정의되지 않도록 합니다.
 ```bash
 unset LOCALCONFIG  
 ```
@@ -72,7 +72,7 @@ docker-compose -p "fitcoin" -f "docker-compose-couchdb.yaml" up -d
 
 ## 3. 로그 확인
 
-아래 스크립트를 실행하여 로그 결과를 확인합니다.
+다음 스크립트를 실행하여 로그 결과를 확인합니다.
 
 **Command**
 ```bash
