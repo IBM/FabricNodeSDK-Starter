@@ -36,7 +36,7 @@ b. 증명서를 발급한다.
 
 c. Peers, Orderers 그리고 Channel을 생성한다.
 
-  * `configtx.yaml` 파일은 블록체인 네트워크 또는 채널을 초기화하고, Orderer에게 체인의 가장 첫번 째인 제네시스 블럭을 제공합니다. (Shop 또는 Fincoin 피어일 경우 멤버쉽 서비스는 각 채널 피어에 설치됨.)
+  * `configtx.yaml` 파일은 블록체인 네트워크 또는 채널을 초기화하고, Orderer에게 체인의 가장 첫번 째인 제네시스 블럭을 제공합니다. (Shop 또는 Fincoin 피어일 경우 멤버십 서비스는 각 채널 피어에 설치됨.)
 
 d. Orderer, Peer, Channel, Network 도커 이미지를 생성한다.
 
