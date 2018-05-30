@@ -1,4 +1,4 @@
-# Hyperledger Fabric Node SDK을 이용한 블록체인 네트워크의 생성과 배포
+# Hyperledger Fabric Node SDK를 사용하여 블록체인 네트워크를 생성하고 배포하기
 
 ## 블록체인 네트워크 설정하기
 
