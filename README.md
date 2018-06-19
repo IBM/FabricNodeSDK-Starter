@@ -1,5 +1,7 @@
 # Creating and Deploying a Blockchain Network using Hyperledger Fabric Node SDK
 
+*Read this in other languages: [한국어](README-ko.md)*
+
 ## Instructions for setting the blockchainNetwork
 
 Welcome to Part 1 of building a Blockchain Application. This first pattern is part of a larger application that uses blockchain as a back-end to record fitness activities and manage transactions such as handling acquisition of products via fitcoins. The first step in this series is focused on creating and deploy a Hyperledger Blockchain Network using the Hyperledger Fabric Node SDK. We have two participants, namely a buyer and seller/shop peers.  The buyer is the one who downloads the application and subsequently registers his steps on the blockchain. The seller is the one who verifying that the buyer has the right number of fitcoins to make purchases. A developer who has a lite account can run this application locally or adapt it to the [IBM Blockchain Starter Plan](https://www.ibm.com/blogs/blockchain/2018/03/getting-started-on-the-ibm-blockchain-platform-starter-plan/). 
