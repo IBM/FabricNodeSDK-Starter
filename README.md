@@ -4,7 +4,7 @@
 
 ## Instructions for setting the blockchainNetwork
 
-Welcome to Part 1 of building a Blockchain Application. This first pattern is part of a larger application that uses blockchain as a back-end to record fitness activities and manage transactions such as handling acquisition of products via fitcoins. The first step in this series is focused on creating and deploy a Hyperledger Blockchain Network using the Hyperledger Fabric Node SDK. We have two participants, namely a buyer and seller/shop peers.  The buyer is the one who downloads the application and subsequently registers his steps on the blockchain. The seller is the one who verifying that the buyer has the right number of fitcoins to make purchases. A developer who has a lite account can run this application locally or adapt it to the [IBM Blockchain Starter Plan](https://www.ibm.com/blogs/blockchain/2018/03/getting-started-on-the-ibm-blockchain-platform-starter-plan/). 
+Welcome to Part 1 of building a Blockchain Application. This first pattern is part of a larger application that uses blockchain as a back-end to record fitness activities and manage transactions such as handling acquisition of products via fitcoins. The first step in this series is focused on creating and deploy a Hyperledger Blockchain Network using the Hyperledger Fabric Node SDK. We have two participants, namely a buyer and seller/shop peers.  The buyer is the one who downloads the application and subsequently registers his steps on the blockchain. The seller is the one who verifying that the buyer has the right number of fitcoins to make purchases. A developer who has a lite account can run this application locally or adapt it to the [IBM Blockchain Starter Plan](https://www.ibm.com/blogs/blockchain/2018/03/getting-started-on-the-ibm-blockchain-platform-starter-plan/).
 
 ## Included Components
 * Hyperledger Fabric
@@ -16,7 +16,7 @@ Welcome to Part 1 of building a Blockchain Application. This first pattern is pa
 ![Application Workflow](images/Pattern1-Build-a-network.png)
 
 ## Prerequisites
-* [Docker](https://www.docker.com/products/overview) - v1.13 or higher
+* [Docker](https://www.docker.com/products) - v1.13 or higher
 * [Docker Compose](https://docs.docker.com/compose/overview/) - v1.8 or higher
 
 ## Steps
@@ -57,17 +57,17 @@ chmod +x clean.sh
 
 Make sure the 'LOCALCONFIG' environment variable is unset if you are re-running this step after running the test below
 ```bash
-unset LOCALCONFIG  
+unset LOCALCONFIG
 ```
 
 There 2 options to install chaincode on the peer nodes and start the Blockchain network. You can select any one of the following:
 * Using LevelDB to store the blockchain state database. Run the following command to start the network:
 ```bash
-docker-compose -p "fitcoin" -f "docker-compose.yaml" up -d    
+docker-compose -p "fitcoin" -f "docker-compose.yaml" up -d
 ```
 * Using CouchDB to store the blockchain state database. Run the following command to start the network:
 ```bash
-docker-compose -p "fitcoin" -f "docker-compose-couchdb.yaml" up -d    
+docker-compose -p "fitcoin" -f "docker-compose-couchdb.yaml" up -d
 ```
 
 ## 3. Check the logs
@@ -126,6 +126,6 @@ node indexCouchDB.js
 * [Hyperledger Fabric code on GitHub](https://github.com/hyperledger/fabric)
 
 ## License
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
